@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic 4 Components: Action Sheets
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="action-sheets-basic-page">
+  
+  <button ion-button block(click)="openMenu()">Badges</button>
+
+
+<ion-badge>99</ion-badge>
+
+<ion-badge color="primary">11</ion-badge>
+<ion-badge color="secondary">22</ion-badge>
+<ion-badge color="tertiary">33</ion-badge>
+<ion-badge color="success">44</ion-badge>
+<ion-badge color="warning">55</ion-badge>
+<ion-badge color="danger">66</ion-badge>
+<ion-badge color="light">77</ion-badge>
+<ion-badge color="medium">88</ion-badge>
+<ion-badge color="dark">99</ion-badge>
+
+<ion-item>
+  <ion-badge slot="start">11</ion-badge>
+  <ion-label>My Item</ion-label>
+  <ion-badge slot="end">22</ion-badge>
+</ion-item>
+
+  <button ion-button block(click)="openMenu()">Checkbox</button>
+
+<ion-checkbox></ion-checkbox>
+
+<ion-checkbox disabled="true"></ion-checkbox>
+
+<ion-checkbox checked="true"></ion-checkbox>
+
+<ion-checkbox color="primary"></ion-checkbox>
+<ion-checkbox color="secondary"></ion-checkbox>
+<ion-checkbox color="danger"></ion-checkbox>
+<ion-checkbox color="light"></ion-checkbox>
+<ion-checkbox color="dark"></ion-checkbox>
+
+<ion-list>
+  <ion-item *ngFor="let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+  <button ion-button block(click)="openMenu()">Show Action Sheet</button>
+</ion-content>
